@@ -1,0 +1,267 @@
+/* Start Variable */
+:root {
+    --main-color: #3a6cf4;
+    --second-color: #fff;
+    --main-transition: 0.7s ease;
+    --section-padding: 50px;
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    /* 1.5 * 10px rem = 15px yerje3 ll html font size */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End Global Rules */
+
+/* Start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+}
+
+header .left-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+header .left-section img {
+    width: 46%;
+    padding-left: 16px;
+}
+
+header .mid-section {
+    display: flex;
+    align-items: center;
+    margin-left: -9%;
+}
+
+header .mid-section form {
+    display: flex;
+    width: 40px;
+    width: 628px;
+}
+
+header .mid-section form input {
+    flex: 1;
+    border-radius: 2px 0 0 2px;
+    padding: 12px;
+    font-size: 1.6rem;
+    border: 1px solid #d3d3d3;
+    border-right: none;
+    outline: none;
+}
+
+header .mid-section form button {
+    width: 64px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 2px 2px 0;
+    padding-top: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+header .mid-section form button:hover {
+    border-color: #c6c6c6;
+    background-color: #f0f0f0;
+}
+
+header .mid-section .mic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+header .right-section a {
+    padding-right: 18px;
+    color: black;
+}
+
+/* End Header */
+
+/* Start Content-area */
+.content-area {
+    height: calc(100vh - 56px);
+    display: flex;
+    background-color: #f9f9f9;
+}
+
+.content-area aside {
+    height: 100%;
+    width: 280px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.content-area aside nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    padding-right: 15px;
+}
+
+
+
+
+.content-area aside nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: black;
+}
+
+.content-area aside nav a.active {
+    background-color: #e5e5e5;
+}
+
+.content-area aside nav a:hover:not(:first-child) {
+    background-color: rgba(0 0 0 / 0.05);
+}
+
+.content-area aside nav a span {
+    margin-left: 24px;
+    font-size: 1.4rem;
+    line-height: 2em;
+    font-weight: 400;
+    color: #030303;
+}
+
+#active-span {
+    font-weight: 500;
+}
+
+hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+    margin: 10px 0;
+}
+
+.content-area aside nav h3 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #606060;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+
+.content-area aside nav a img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.content-area main {
+    flex: 1;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+    padding: 35px 15px;
+}
+
+
+.content-area main .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content-area main .container .video {
+    width: 315px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.content-area main .container .video .thumbnail {
+    width: 100%;
+    height: 187px;
+    margin-bottom: 12px;
+}
+
+.content-area main .container .video .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-area main .container .video .video-details {
+    display: flex;
+}
+
+.content-area main .container .video .creator-img img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.content-area main .container .video .title {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-area main .container .video .title .video-title {
+    color: rgb(3, 3, 3);
+    font-size: 1.6rem;
+    max-width: 278px;
+    font-weight: 500;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.content-area main .container .video .title .video-creator,
+.title span {
+    color: rgb(96, 96, 96);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.content-area main .container .video .title .video-creator:hover {
+    color: black;
+}
+
+
+/* End  Content-area */
